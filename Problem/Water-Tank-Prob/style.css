@@ -1,0 +1,42 @@
+table {
+    border-collapse: collapse;
+    width: 500px;
+    height: 500px; /* Updated default height to 200px */
+    background-color: lightgray; /* Default color for the tank */
+  }
+  
+  td {
+   
+   
+    border: 1px solid black;
+  }
+  
+
+  
+  .block {
+    background-color:rgba(238, 222, 9, 0.777);
+    position: relative; /* Added position relative for overlapping */
+  }
+  
+  .water {
+    background-color:blue;
+    position: relative; /* Added position relative for overlapping */
+  }
+
+  .water::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--water-height); /* Updated to use custom property */
+    background-color: grey; /* Color for the input height */
+    z-index: 1;
+  }
+  
+  
+ .empty{
+  background-color:grey;
+    position: relative; 
+ }
+  
